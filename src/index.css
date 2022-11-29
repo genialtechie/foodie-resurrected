@@ -3,3 +3,13 @@
 @tailwind components;
 
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Didact+Gothic&display=swap');
+body,
+header {
+  color: #ffffff;
+  font-family: 'DM Serif Display', serif;
+}
+nav,
+a.btn {
+  font-family: 'Didact Gothic', sans-serif;
+}
