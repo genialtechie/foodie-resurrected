@@ -6,6 +6,9 @@ module.exports = {
         hero: "url('./assets/img/serenidad-main.jpg')",
       }),
     },
+    transitionProperty: {
+      width: 'width',
+    },
   },
   plugins: [],
 };

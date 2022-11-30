@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as Menu } from '../assets/icons/menu.svg';
+import MobileNav from './MobileNav';
 
 const Nav = () => {
+  const [openNav, setOpenNav] = useState(false);
+
   return (
     <div className="relative">
       <nav className="mx-auto hidden lg:block w-4/5 tracking-wider">
@@ -21,7 +24,16 @@ const Nav = () => {
           </ul>
         </div>
       </nav>
-      <Menu className="absolute top-14 right-0 lg:hidden text-red-400" />
+      <Menu
+        className="absolute top-14 right-0 lg:hidden text-red-400"
+        onClick={() => setOpenNav(!openNav)}
+      />
+      {openNav && (
+        <MobileNav
+          setOpenNav={setOpenNav}
+          openNav={openNav}
+        />
+      )}
     </div>
   );
 };
