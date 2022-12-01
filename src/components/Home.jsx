@@ -3,7 +3,7 @@ import Nav from './Nav';
 
 const Home = () => {
   return (
-    <div className="h-fit bg-hero bg-no-repeat bg-cover bg-center bg-fixed">
+    <div className="h-fit bg-hero bg-no-repeat bg-cover bg-center lg:bg-fixed">
       <div className="h-full p-5 pb-20 bg-slate-900/50">
         <div className="flex flex-col h-full">
           <Nav />
