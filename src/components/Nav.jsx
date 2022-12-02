@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { ReactComponent as Menu } from '../assets/icons/menu.svg';
 import MobileNav from './MobileNav';
+import useStatus from '../context/useStatus';
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
+  const status = useStatus();
 
   return (
     <div className="relative">
@@ -11,7 +13,7 @@ const Nav = () => {
         <div className="flex justify-between py-4 border-b border-slate-300 ">
           <ul className="w-fit flex">
             <li className="px-3 font-bold font-sans bg-slate-300/50 rounded-sm text-lg">
-              Closed
+              {status}
             </li>
             <li className="px-3">
               Wed-Fri: 4p-10p <span className="text-red-400">+</span> Sat:

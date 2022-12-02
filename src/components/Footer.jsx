@@ -1,7 +1,9 @@
 import React from 'react';
 import pattern from '../assets/img/footer-pattern.png';
+import useStatus from '../context/useStatus';
 
 const Footer = () => {
+  const status = useStatus();
   return (
     <div className="relative h-fit bg-[#fffcf3]">
       <div className="w-4/5 py-10 h-fit bg-[#1B1106] mx-auto relative z-10 my-10">
@@ -22,7 +24,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 auto-cols-max lg:grid-rows-3 lg:grid-cols-2 gap-4">
             <div className="text-center lg:text-left">
               <div className="px-5 py-2 mx-auto lg:mx-0 w-fit bg-[#fffcf3] text-[#1b1106] mb-3">
-                Open
+                {status}
               </div>
               <p className="mb-2 btn text-[#fffcf3]">Mon-Thurs: 11am-9pm</p>
               <p className="mb-2 btn text-[#fffcf3]">Fri-Sun: 11am-11pm</p>

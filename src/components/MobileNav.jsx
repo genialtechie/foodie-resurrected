@@ -1,7 +1,9 @@
 import React from 'react';
 import { ReactComponent as Close } from '../assets/icons/close.svg';
+import useStatus from '../context/useStatus';
 
 const MobileNav = ({ setOpenNav, openNav }) => {
+  const status = useStatus();
   return (
     <div
       className={`fixed inset-x-0 inset-y-0 overflow-y-scroll bg-[#fffcf3] p-5 transform delay-100 transition duration-300 ${
@@ -27,7 +29,7 @@ const MobileNav = ({ setOpenNav, openNav }) => {
       </div>
       <hr className="w-4/5 bg-red-400 mx-auto mb-16" />
       <div className="mb-20 text-center text-xl tracking-wide text-black btn">
-        <p className="mb-4">Closed</p>
+        <p className="mb-4">{status}</p>
         <p className="mb-1">Wed-Fri: 4p-10p</p>
         <p className="mb-1">Sat: 12p-10p</p>
       </div>
